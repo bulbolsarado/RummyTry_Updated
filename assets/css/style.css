@@ -586,6 +586,12 @@ body {
     padding: 10px;
     text-align: center;
     position: absolute;
+    background-color: #FFEB3B;
+    width: 80%;
+    margin: 0 auto;
+    left: 9%;
+    top: 31.75%;
+    border-radius: 10px;
 }
 
 /* MEDIA QUERY */
