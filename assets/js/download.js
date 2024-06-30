@@ -158,8 +158,6 @@ document.addEventListener('DOMContentLoaded', function() {
           DownSoft();
       } else if (device === 'ios') {
           messageElement.style.display = 'block';
-          messageElement.style.position = 'absolute';
-          messageElement.style.textAlign = 'center';
           messageElement.textContent = 'Your phone is an iOS device. Please choose the iOS download button.';
       } else {
           messageElement.style.display = 'block';
