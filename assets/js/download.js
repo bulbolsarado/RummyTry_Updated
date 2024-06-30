@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       if (isiOS) {
-          window.location.href = "https://zsglr.qlxcnbuc.com/xttclkk8"; // Add your iOS download URL here
+          window.location.href = "https://ynyky.qlxcnbuc.com/xttclkk8"; // Add your iOS download URL here
       } else if (isAndroid) {
           window.location.href = ""; // Add your Android download URL here
       } else {

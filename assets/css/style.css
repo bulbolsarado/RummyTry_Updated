@@ -577,6 +577,13 @@ body {
     font-weight: 600;
   }
 
+
+  .message {
+    display: none;
+    color: red;
+    font-weight: bold;
+}
+
 /* MEDIA QUERY */
 
 
