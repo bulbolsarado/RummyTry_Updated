@@ -150,6 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const device = detectDevice();
   const androidButton = document.getElementById('androidDownload');
+  const androidtopButton = document.getElementById('androidtopDownload');
+  const androidbottomButton = document.getElementById('androidbottomDownload');
   const iosButton = document.getElementById('iosDownload');
   const messageElement = document.getElementById('message');
   const modal = document.getElementById('myModal');
@@ -170,6 +172,26 @@ document.addEventListener('DOMContentLoaded', function() {
           showModal('Unable to detect device type.');
       }
   });
+
+  androidtopButton.addEventListener('click', function() {
+    if (device === 'android') {
+        DownSoft();
+    } else if (device === 'ios') {
+        showModal('Your phone is an iOS device. Please choose the iOS download button.');
+    } else {
+        showModal('Unable to detect device type.');
+    }
+});
+
+androidbottomButton.addEventListener('click', function() {
+  if (device === 'android') {
+      DownSoft();
+  } else if (device === 'ios') {
+      showModal('Your phone is an iOS device. Please choose the iOS download button.');
+  } else {
+      showModal('Unable to detect device type.');
+  }
+});
 
   iosButton.addEventListener('click', function() {
       if (device === 'ios') {
