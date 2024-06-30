@@ -69,6 +69,7 @@
 //       "";
 //   }
 // }
+
 document.addEventListener('DOMContentLoaded', function() {
   function detectDevice() {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -151,30 +152,42 @@ document.addEventListener('DOMContentLoaded', function() {
   const androidButton = document.getElementById('androidDownload');
   const iosButton = document.getElementById('iosDownload');
   const messageElement = document.getElementById('message');
+  const modal = document.getElementById('myModal');
+  const modalMessage = document.getElementById('modalMessage');
+  const span = document.getElementsByClassName('close')[0];
+
+  function showModal(message) {
+      modalMessage.textContent = message;
+      modal.style.display = "block";
+  }
 
   androidButton.addEventListener('click', function() {
       if (device === 'android') {
-          messageElement.style.display = 'none';
           DownSoft();
       } else if (device === 'ios') {
-          messageElement.style.display = 'block';
-          messageElement.textContent = 'Your phone is an iOS device. Please choose the iOS download button.';
+          showModal('Your phone is an iOS device. Please choose the iOS download button.');
       } else {
-          messageElement.style.display = 'block';
-          messageElement.textContent = 'Unable to detect device type.';
+          showModal('Unable to detect device type.');
       }
   });
 
   iosButton.addEventListener('click', function() {
       if (device === 'ios') {
-          messageElement.style.display = 'none';
           DownSoft();
       } else if (device === 'android') {
-          messageElement.style.display = 'block';
-          messageElement.textContent = 'Your phone is an Android device. Please choose the Android download button.';
+          showModal('Your phone is an Android device. Please choose the Android download button.');
       } else {
-          messageElement.style.display = 'block';
-          messageElement.textContent = 'Unable to detect device type.';
+          showModal('Unable to detect device type.');
       }
   });
+
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
 });
