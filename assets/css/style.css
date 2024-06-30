@@ -606,6 +606,7 @@ body {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  border-radius: 10px;
 }
 .close {
   color: #aaa;
@@ -618,6 +619,10 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+#modalMessage {
+  font-size: 0.75rem;
 }
 /* MEDIA QUERY */
 
